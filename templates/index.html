@@ -28,6 +28,9 @@
         <h2>KvinnoLag Juristbyrå har sålt juridiska tjänster i över 20 år. Vi erbjuder expertis inom olika rättsområden och har byggt upp ett starkt rykte för att stödja och stärka kvinnliga klienter. Vår verksamhet grundades i Trollhättan med syftet att tillhandahålla skräddarsydda juridiska lösningar för våra kunder.</h2>
         <div></div>
         <h2>Genom hängivenhet och professionalism har vi vuxit och utvecklats till en pålitlig partner för klienter som behöver förvaltningsjuridisk hjälp. Idag är vår expertis och engagemang fortsatt starka, och vi fortsätter att sträva efter att uppfylla och överträffa våra kunders förväntningar.</h2>
+        <button id="boka-en-konsultation" onclick="sendMail()">Boka en konsultation</button>
+
+
     </div>
 
     <div id="tjänster">
@@ -48,7 +51,7 @@
             <h3>Överklaganden och Besvär</h3>
             <p></p>Vi hjälper dig med överklaganden och<p></p>besvär gällande förvaltningsbeslut för att<p></p>säkerställa rättvisa utfall för dig.</p>
         </div>
-        <button id="boka-en-konsultation">Boka en konsultation</button>
+        <button id="boka-en-konsultation" onclick="sendMail()">Boka en konsultation</button>
     </div>
 
     <div id="UNIKT-TILLVÄGAGÅNGSSÄTT">
@@ -84,7 +87,7 @@
             <p>är dedikerade till att uppnå de bästa</p>
             <p>resultaten för våra klienter.</p>
         </div>
-        <button id="boka-en-konsultation">Boka en konsultation</button>
+        <button id="boka-en-konsultation" onclick="sendMail()">Boka en konsultation</button>
     </div>
 
 
@@ -127,40 +130,38 @@
 
     <!-- Chatbot toggle button -->
     <button class="chatbot-button" onclick="toggleChat()">Chat</button>
+    <!-- This chat container -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <span>JuristAssist</span>
+            <span class="close-btn" onclick="toggleChat()">×</span>
+        </div>
+        
+        <!-- User Registration Form -->
+        <div id="user-registration">
+            <h3>Vänligen registrera dig för att chatta</h3>
+            <form id="user-form">
+                <input type="text" placeholder="Förnamn" id="first_name" required>
+                <input type="text" placeholder="Efternamn" id="last_name" required>
+                <input type="number" placeholder="Ålder" id="age" required>
+                <input type="text" placeholder="Kön" id="gender" required>
+                <input type="email" placeholder="E-post" id="email" required>
+                <!--<textarea placeholder="Beskriv ditt problem" id="problem" required></textarea>-->
+                <button type="button" onclick="registerUser()">
+                    Starta Chat
+                </button>
+            </form>
+        </div>
 
-<!-- Add this to your chat container -->
-<div class="chatbot-container" id="chatbot">
-    <div class="chatbot-header">
-        <span>JuristAssist</span>
-        <span class="close-btn" onclick="toggleChat()">×</span>
-    </div>
-    
-    <!-- User Registration Form -->
-    <div id="user-registration">
-        <h3>Vänligen registrera dig för att chatta</h3>
-        <form id="user-form">
-            <input type="text" placeholder="Förnamn" id="first_name" required>
-            <input type="text" placeholder="Efternamn" id="last_name" required>
-            <input type="number" placeholder="Ålder" id="age" required>
-            <input type="text" placeholder="Kön" id="gender" required>
-            <input type="email" placeholder="E-post" id="email" required>
-            <!--<textarea placeholder="Beskriv ditt problem" id="problem" required></textarea>-->
-            
-            <button type="button" onclick="registerUser()">
-                Starta Chat
-            </button>
-        </form>
-    </div>
-
-    <!-- Chat Interface (initially hidden) -->
-    <div class="chat-interface" style="display:none;">
-        <div class="chatbot-messages" id="chat-messages"></div>
-        <div class="chatbot-input">
-            <input type="text" id="user-input" placeholder="Skriv ditt meddelande...">
-            <button onclick="sendMessage()">Skicka</button>
+        <!-- Chat Interface (initially hidden) -->
+        <div class="chat-interface" style="display:none;">
+            <div class="chatbot-messages" id="chat-messages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="user-input" placeholder="Skriv ditt meddelande...">
+                <button onclick="sendMessage()">Skicka</button>
+            </div>
         </div>
     </div>
-</div>
 
 
 
@@ -255,6 +256,12 @@
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             }
         }
+
+        function sendMail() {
+            window.location.href = "mailto:kontakta@kvinnolag.se";
+        }
+
+
     </script>
 
 
