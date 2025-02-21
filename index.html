@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+
+        /* Import Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f4f0;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        .Rectangel_box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.5); /* Slight transparency */
+            backdrop-filter: blur(5px); /* Adds a blur effect to enhance transparency */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 45px 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000; /* Ensures it stays above other content */
+        }
+
+        .Rectangel_box h1 {
+            color: #b78356;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .Rectangel_box h3 {
+            font-size: 14px;
+            color: #777;
+            margin: 0;
+        }
+
+        .Rectangel_box ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Rectangel_box li {
+            display: inline;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .Rectangel_box li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .Rectangel_box li a:hover {
+            color: #b78356;
+        }
+
+        /* Hero Section */
+        #intro_text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 60px;
+            background-color: #E6D8CA;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        #intro_text h1 {
+            color: black;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        #intro_text h2 {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Services Section */
+        #tjänster {
+            text-align: center;
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        #tjänster h3 {
+            color: #b78356;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        #tjänster h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        #tjänster div {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        #tjänster div i {
+            font-size: 40px;
+            color: #b78356;
+            margin-bottom: 10px;
+        }
+
+        #tjänster div h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #tjänster div p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        #boka-en-konsultation {
+            background-color: #b78356;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #boka-en-konsultation:hover {
+            background-color: #9c6a3e;
+        }
+
+        /* Unique Approach Section */
+        #UNIKT-TILLVÄGAGÅNGSSÄTT {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px;
+            background-color: #E6D8CA;
+        }
+
+        #UNIKT-TILLVÄGAGÅNGSSÄTT h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        #UNIKT-TILLVÄGAGÅNGSSÄTT h3 {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        /* Why Work With Us */
+        #varför-arbeta-med-oss {
+            text-align: center;
+            padding: 100px;
+            background-color: white;
+        }
+
+        #varför-arbeta-med-oss h2 {
+            color: #b78356;
+            font-size: 18px;
+        }
+
+        #varför-arbeta-med-oss h1 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        #varför-arbeta-med-oss div {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #varför-arbeta-med-oss div i {
+            font-size: 40px;
+            color: #b78356;
+            margin-bottom: 10px;
+        }
+
+        #varför-arbeta-med-oss div h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #varför-arbeta-med-oss div p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Contact Section */
+        #kontakta-oss {
+            text-align: left;
+            padding: 60px;
+            background-color: #E6D8CA;
+        }
+
+        #kontakta-oss h2 {
+            color: #b78356;
+            font-size: 18px;
+        }
+
+        #kontakta-oss h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Form */
+        #kontaktformulär {
+            align-items: right;
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #kontaktformulär input,
+        #kontaktformulär textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+
+        #kontaktformulär input[type="submit"] {
+            background-color: #b78356;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #kontaktformulär input[type="submit"]:hover {
+            background-color: #9c6a3e;
+        }
+
+        /* Google Map */
+        #google-map {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Footer */
+        #footer {
+            background-color: #f8f4f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #footer h3 {
+            color: #b78356;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #footer p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Smooth Scrolling for Navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="Rectangel_box">
+        <h1>KVINNOLAG Juristbyrå</h1>
+        <ul>
+            <li><a href="#intro_text">Hem</a></li>
+            <li><a href="#tjänster">Tjänster</a></li>
+            <li><a href="#UNIKT-TILLVÄGAGÅNGSSÄTT">Om</a></li>
+            <li><a href="#varför-arbeta-med-oss">Varför välja oss</a></li>
+            <li><a href="#kontakta-oss">Kontakta</a></li>
+        </ul>
+    </div>
+
+
+    <div id="intro_text">
+        <p></p>
+        <h1>Juridik med fokus på klienters behov</h1>
+        <h2>KvinnoLag Juristbyrå har sålt juridiska tjänster i över 20 år. Vi erbjuder expertis inom olika rättsområden och har byggt upp ett starkt rykte för att stödja och stärka kvinnliga klienter. Vår verksamhet grundades i Trollhättan med syftet att tillhandahålla skräddarsydda juridiska lösningar för våra kunder.</h2>
+        <div></div>
+        <h2>Genom hängivenhet och professionalism har vi vuxit och utvecklats till en pålitlig partner för klienter som behöver förvaltningsjuridisk hjälp. Idag är vår expertis och engagemang fortsatt starka, och vi fortsätter att sträva efter att uppfylla och överträffa våra kunders förväntningar.</h2>
+    </div>
+
+    <div id="tjänster">
+        <h3>Tjänster</h3>
+        <h1>Erfarna juristers Kvalitetstjänster</h1>
+        <div>
+            <i class="fas fa-scale-balanced"></i>
+            <h3>Juridisk Rådgivning</h3>
+            <p></p>Våra erfarna jurister erbjuder skräddarsydd <p></p>juridisk rådgivning för dina specifika behov <p></p>och frågor.</p>
+        </div>
+        <div>
+            <i class="fas fa-gavel"></i>
+            <h3>Företrädande i Domstol</h3>
+            <p></p>Vi står redo att företräda dig i rätten och se<p></p>till att dina intressen och rättigheter<p></p>skyddas.</p>
+        </div>
+        <div>
+            <i class="fas fa-file-signature"></i>
+            <h3>Överklaganden och Besvär</h3>
+            <p></p>Vi hjälper dig med överklaganden och<p></p>besvär gällande förvaltningsbeslut för att<p></p>säkerställa rättvisa utfall för dig.</p>
+        </div>
+        <button id="boka-en-konsultation">Boka en konsultation</button>
+    </div>
+
+    <div id="UNIKT-TILLVÄGAGÅNGSSÄTT">
+        <h2>UNIKT TILLVÄGAGÅNGSSÄTT</h2>
+        <h1>Exceptionell tillvägagångssätt</h1>
+        <h3>Vi på KvinnoLag Juristbyrå är kända för vårt exceptionella tillvägagångssätt när det gäller att lösa komplexa juridiska problem. Genom att kombinera vår erfarenhet och kreativitet skapar vi unika strategier som hjälper våra klienter att nå sina mål.</h3>
+        <p></p>
+        <h3>Genom att noga analysera varje fall och hitta innovativa lösningar, säkerställer vi att vi alltid är ett steg före i rättsliga frågor. Vår passion för rättvisa och expertis i förvaltningsrätt gör oss till det självklara valet för klienter som söker en pålitlig och effektiv partner.</h3>
+    </div>
+
+
+    <div id="varför-arbeta-med-oss">
+        <h2>VARFÖR ARBETA MED OSS</h2>
+        <h1>Varför KvinnoLag Juristbyrå?</h1>
+        <div id="stor-erfarenhet">
+            <i class="fas fa-award"></i>
+            <h3>STOR ERFARENHET</h3>
+            <p>Vi har gedigen erfarenhet inom juridik</p>
+            <p>som gör oss kompetenta att hantera</p>
+            <p>komplexa ärenden effektivt.</p>
+        </div>
+        <div id="Personlig-service">
+            <i class="fas fa-user"></i>
+            <h3>PERSONLIG SERVICE</h3>
+            <p>Vi fokuserar på att ge varje klient personlig</p>
+            <p>och skräddarsydd service för att möta</p>
+            <p>deras unika juridiska behov.</p>
+        </div>
+        <div id="Juridisk-expertis">
+            <i class="fas fa-balance-scale"></i>
+            <h3>JURIDISK EXPERTIS</h3>
+            <p>Vårt team består av skickliga jurister som</p>
+            <p>är dedikerade till att uppnå de bästa</p>
+            <p>resultaten för våra klienter.</p>
+        </div>
+        <button id="boka-en-konsultation">Boka en konsultation</button>
+    </div>
+
+
+    <div id="kontakta-oss">
+        <h2>KONTAKTA OSS</h2>
+        <h1>Kontakta KVINNOLAG Juristbyrå för juridisk rådgivning</h1>
+        <div id="kontaktuppgifter">
+            <p>Information om kontoret</p>
+            <p>Adress</p>
+            <p>KVINNOLAG Juristbyrå</p><p>Åkerssjövägen 10</p><p>461 53 Trollhättan</p><p>Sweden</p>
+            <p>Telefon</p><p>0046 0707807111</p>
+            <p>E-post</p><p>kontakta@kvinnolag.se</p>
+    </div>
+
+    <div id="sendmail">
+        <form id="kontaktformulär" method="post">
+            <label for="namn">Namn:</label><br>
+            <input type="text" id="namn" name="namn" required><br>
+            <label for="email">E-post:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="ämne">Ämne:</label><br>
+            <input type="ämne" id="ämne" name="ämne" required><br>
+            <label for="meddelande">Meddelande:</label><br>
+            <textarea id="meddelande" name="meddelande" required></textarea><br>
+            <input type="submit" value="Skicka">
+            </form>
+    </div>
+
+
+    <div id="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2098.397036084429!2d12.267917612662623!3d58.268590095363834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46453dd69337acb1%3A0xf792f9f17fed2eb4!2sKvinnoLag%20Juristbyr%C3%A5!5e0!3m2!1sen!2sse!4v1740145522906!5m2!1sen!2sse" width="1890" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+    <div id="footer">
+        <h3>KVINNOLAG Juristbyrå</h3>
+        <p>Telefon</p>
+        <p>0707807111</p>
+    </div>
+
+
+
+
+
+</body>
+</html>
