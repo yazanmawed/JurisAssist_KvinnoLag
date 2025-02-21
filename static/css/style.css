@@ -16,14 +16,14 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.5); /* Slight transparency */
-            backdrop-filter: blur(5px); /* Adds a blur effect to enhance transparency */
+            background-color: rgba(255, 255, 255, 0.5); 
+            backdrop-filter: blur(5px);
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 45px 50px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000; /* Ensures it stays above other content */
+            z-index: 1000; 
         }
 
         .Rectangel_box h1 {
@@ -64,29 +64,80 @@
             color: #b78356;
         }
 
-        /* Hero Section */
-        #intro_text {
-            display: flex;
+    /* Hero Section Container */
+    .intro-container {
+        display: flex;
+        gap: 0px;
+        align-items: center;
+        width: 100%; /* Full width */
+        padding: 0px 0;
+        margin: 0 auto;
+        background-color: #E6D8CA;
+    }
+    #boka-en-konsultation-1 {
+        background-color: #b78356;
+        color: white;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    #boka-en-konsultation-1:hover {
+        background-color: #9c6a3e;
+    }
+    #intro_text {
+        margin-top: 100px;
+        flex: 1;
+        padding: 20px;
+        background-color: #E6D8CA;
+        width: 50%; 
+        box-sizing: border-box; 
+    }
+
+    #intro-image {
+        flex: 1;
+        width: 50%; 
+        height: 550px; 
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Keep existing typography */
+    #intro_text h1 {
+        color: black;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    #intro_text h2 {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+        .intro-container {
             flex-direction: column;
-            align-items: flex-start;
-            padding: 60px;
-            background-color: #E6D8CA;
-            max-width: 1100px;
-            margin: auto;
+            padding: 20px;
         }
-
-        #intro_text h1 {
-            color: black;
-            font-size: 36px;
-            font-weight: bold;
+        
+        #intro_text,
+        #intro-image {
+            width: 100% !important;
+            height: auto;
         }
-
-        #intro_text h2 {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
+        
+        #intro_text {
+            padding: 40px;
         }
-
+        
+        #intro-image {
+            order: -1;
+        }
+    }
         /* Services Section */
         #tjänster {
             text-align: center;
@@ -145,11 +196,28 @@
         }
 
         /* Unique Approach Section */
-        #UNIKT-TILLVÄGAGÅNGSSÄTT {
+        .UNIKT-TILLVÄGAGÅNGSSÄTT-container {
             display: flex;
+            gap: 0px;
+            align-items: center;
+            width: 100%;
+            padding: 0px 0;
+            margin: 0 auto;
+            background-color: #E6D8CA;
+        }
+        #unik-tillvägagångssätt-image {
+
+            margin-left: 273px;
+            flex: 1;
+            width: 50%; 
+            height: 600px;
+            object-fit: cover;
+            object-position: center;
+        }
+        #UNIKT-TILLVÄGAGÅNGSSÄTT {
             align-items: center;
             justify-content: space-between;
-            padding: 100px;
+            padding: 50px;
             background-color: #E6D8CA;
         }
 
