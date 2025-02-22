@@ -10,13 +10,18 @@
     <title>KVINNOLAG Juristbyrå</title>
 </head>
 <body>
+
+    <!-- Hamburger Menu -->
+    <button class="menu-toggle">☰</button>
+    <div class="mobile-menu"></div>
+
+    <!-- Navigation Bar -->
     <div class="Rectangel_box">
         <div class="logo-container">
             <h1>KVINNOLAG Juristbyrå</h1>
             <h3>DIN PARTNER FÖR STÖD OCH RÄTTVISA</h3>
         </div>
-    
-        <ul>
+        <ul class="desktop-menu">
             <li><a href="#intro_text">Hem</a></li>
             <li><a href="#tjänster">Tjänster</a></li>
             <li><a href="#UNIKT-TILLVÄGAGÅNGSSÄTT">Om</a></li>
@@ -27,7 +32,7 @@
 
     <div class="intro-container">
         <div id="intro_text">
-            <p></p>
+            <br></br><br></br>
             <h1>Juridik med fokus på klienters behov</h1>
             <h2>KvinnoLag Juristbyrå har sålt juridiska tjänster i över 20 år. Vi erbjuder expertis inom olika rättsområden och har byggt upp ett starkt rykte för att stödja och stärka kvinnliga klienter. Vår verksamhet grundades i Trollhättan med syftet att tillhandahålla skräddarsydda juridiska lösningar för våra kunder.</h2>
             <div></div>
@@ -38,6 +43,7 @@
     </div>
 
     <div id="tjänster">
+        <br></br>
         <h3>TJÄNSTER</h3>
         <h1>Erfarna juristers<br>Kvalitetstjänster</h1>
         
@@ -75,17 +81,21 @@
 
     <div class="UNIKT-TILLVÄGAGÅNGSSÄTT-container">
         <div id="UNIKT-TILLVÄGAGÅNGSSÄTT">
+            <br></br><br></br>
             <h2>UNIKT TILLVÄGAGÅNGSSÄTT</h2>
             <h1>Exceptionell tillvägagångssätt</h1>
             <h3>Vi på KvinnoLag Juristbyrå är kända för vårt exceptionella tillvägagångssätt när det gäller att lösa komplexa juridiska problem. Genom att kombinera vår erfarenhet och kreativitet skapar vi unika strategier som hjälper våra klienter att nå sina mål.</h3>
             <p></p>
             <h3>Genom att noga analysera varje fall och hitta innovativa lösningar, säkerställer vi att vi alltid är ett steg före i rättsliga frågor. Vår passion för rättvisa och expertis i förvaltningsrätt gör oss till det självklara valet för klienter som söker en pålitlig och effektiv partner.</h3>
+            <br></br>
         </div>
         <img src="/static/images/2.jpg" id="unik-tillvägagångssätt-image">
+        
     </div>
 
 
     <div id="varför-arbeta-med-oss">
+        <br></br>
         <h2>VARFÖR ARBETA MED OSS</h2>
         <h1>Varför KvinnoLag Juristbyrå?</h1>
     
@@ -123,6 +133,7 @@
 
 
     <div id="kontakta-oss">
+        <br></br>
         <h2>KONTAKTA OSS</h2>
         <h1>Kontakta KVINNOLAG<br>Juristbyrå för juridisk<br>rådgivning</h1>
     
@@ -318,6 +329,28 @@
             window.location.href = "mailto:kontakta@kvinnolag.se";
         }
 
+
+        // Mobile Menu Logic
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const desktopMenu = document.querySelector('.desktop-menu').cloneNode(true);
+        
+        // Clear existing and clone desktop menu
+        mobileMenu.innerHTML = '';
+        mobileMenu.appendChild(desktopMenu);
+
+        // Toggle Menu
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.querySelector('.menu-toggle').classList.remove('active');
+            });
+        });
 
     </script>
 
