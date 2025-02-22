@@ -161,6 +161,7 @@
         }
         
         #intro_text {
+            margin-top: 10px;
             padding: 40px;
         }
         
@@ -827,3 +828,187 @@
             left: 10px;
         }
     }
+
+
+
+    /* Add this at the bottom of your CSS */
+/* ===== Responsive Improvements ===== */
+@media (max-width: 1200px) {
+    .Rectangel_box ul {
+      margin-right: 100px;
+    }
+    
+    #kontaktuppgifter {
+      margin-left: 60px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .Rectangel_box {
+      padding: 25px 30px;
+    }
+    
+    .Rectangel_box ul {
+      display: none; /* Hide desktop menu */
+    }
+    
+    /* Add hamburger menu icon */
+    .menu-toggle {
+      display: block !important;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+    
+    .intro-container,
+    .UNIKT-TILLVÄGAGÅNGSSÄTT-container {
+      flex-direction: column;
+      height: auto;
+    }
+
+    #intro-image{
+        width: 100%;
+        margin-right: 40px;
+        padding: 0%;
+    }
+    
+    #intro_text{
+        width: 100% !important;
+        height: auto;
+    }
+    
+    #unik-tillvägagångssätt-image {
+      width: 100% !important;
+      height: auto;
+      margin-right: 200px;
+    }
+    
+    #UNIKT-TILLVÄGAGÅNGSSÄTT {
+      padding: 30px;
+    }
+    
+    #kontaktuppgifter-sendmail-container {
+      flex-direction: column;
+    }
+    
+    #kontaktuppgifter,
+    #sendmail {
+      width: 100%;
+      margin: 0;
+      padding: 0px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 36px !important;
+    }
+    
+    .logo-container {
+      margin-left: 10px;
+    }
+    
+    .Rectangel_box h1 {
+      font-size: 22px;
+    }
+    
+    .Rectangel_box h3 {
+      font-size: 14px;
+    }
+    
+    #intro_text h1,
+    #intro_text h2 {
+      width: 90% !important;
+      margin-left: 20px !important;
+    }
+    
+    #boka-en-konsultation-1 {
+      margin-left: 20px;
+    }
+    
+    #tjänster div,
+    #varför-arbeta-med-oss div {
+      width: 100%;
+      display: block;
+      margin-bottom: 30px;
+    }
+    
+    #google-map iframe {
+      height: 300px;
+    }
+    
+    #footer {
+      flex-direction: column;
+      padding: 30px 20px;
+    }
+    
+    #footer h3,
+    #footer .social-icons {
+      margin: 0 !important;
+      text-align: center;
+    }
+    
+    .footer-phone {
+      margin: 20px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 28px !important;
+    }
+    
+    .Rectangel_box {
+      padding: 15px 20px;
+    }
+    
+    #intro_text {
+      padding: 20px !important;
+    }
+    
+    #varför-arbeta-med-oss,
+    #tjänster {
+      padding: 50px 20px;
+    }
+    
+    #kontaktformulär {
+      padding: 30px;
+      margin: 0;
+    }
+    
+    .chatbot-container {
+      width: 100% !important;
+      left: 0 !important;
+      border-radius: 0;
+    }
+  }
+  
+  /* Add hamburger menu toggle */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Mobile menu styles */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .mobile-menu.active {
+    display: block;
+  }
+  
+  .mobile-menu li {
+    display: block;
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+
