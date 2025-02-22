@@ -1,9 +1,13 @@
-        /* Import Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
-        
-        h1, h2, h3, body, p, a, li, input, textarea, #kontaktformulär label, #boka-en-konsultation, #boka-en-konsultation-1, #kontaktformulär input,
-        #kontaktformulär textarea {
+        h2, h3, h4, body, p, a, li, input, textarea, #kontaktformulär label, #boka-en-konsultation, #boka-en-konsultation-1, #kontaktformulär input,
+        #kontaktformulär textarea, div {
             font-family: "Times New Roman", Times, serif;
+        }
+
+        h1{
+            font-family: "Times New Roman", Times, serif;
+            font-weight: 100;
+            font-size: 44px;
+            color: black;
         }
         
 
@@ -36,7 +40,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            margin-left: 250px;
+            margin-left: 30px;
         }
 
         .Rectangel_box h1 {
@@ -48,7 +52,7 @@
 
         .Rectangel_box h3 {
             font-size: 18px;
-            color: #777;
+            color: #666;
             margin: 0;
             font-weight: normal;
         }
@@ -81,17 +85,16 @@
             color: #b78356;
         }
 
-        /* Active Page Styling */
         .Rectangel_box li a.active {
             color: #b78356;
         }
 
-    /* Hero Section Container */
     .intro-container {
         display: flex;
         gap: 0px;
         align-items: center;
         width: 100%;
+        height: 800px;
         padding: 0px 0;
         margin: 0 auto;
         background-color: #E6D8CA;
@@ -112,7 +115,7 @@
         background-color: #9c6a3e;
     }
     #intro_text {
-        margin-top: 100px;
+        margin-top: 80px;
         flex: 1;
         padding: 20px;
         background-color: #E6D8CA;
@@ -123,30 +126,28 @@
     #intro-image {
         flex: 1;
         width: 50%; 
-        height: 550px; 
+        height: 800px; 
         object-fit: cover;
         object-position: center;
-        margin-top: 72px;
+        margin-top: 0px;
     }
 
-    /* Keep existing typography */
     #intro_text h1 {
-        color: black;
-        font-size: 36px;
-        font-weight: bold;
         width: 60%;
         margin-left: 60px;
+        margin-bottom: 50px;
     }
 
     #intro_text h2 {
-        font-size: 18px;
+        font-size: 20px;
+        font-weight: 100;
         color: #555;
         line-height: 1.6;
         width: 70%;
         margin-left: 60px;
+        margin-bottom: 30px;
     }
 
-    /* Mobile responsive */
     @media (max-width: 768px) {
         .intro-container {
             flex-direction: column;
@@ -167,7 +168,6 @@
             order: -1;
         }
     }
-        /* Services Section */
         #tjänster {
             text-align: center;
             padding: 100px 0;
@@ -176,14 +176,18 @@
 
         #tjänster h3 {
             color: #b78356;
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        #tjänster h4 {
+            color: black;
+            font-size: 22px;
             font-weight: 600;
         }
 
         #tjänster h1 {
-            font-size: 40px;
             margin-bottom: 30px;
-            font-weight: 500;
         }
 
         #tjänster div {
@@ -200,15 +204,12 @@
             margin-bottom: 10px;
         }
 
-        #tjänster div h3 {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        #tjänster div p {
-            font-size: 18px;
-            color: #666;
+        .service-text {
+            font-size: 20px;
+            color: #555;
+            font-weight: 500;
+            line-height: 1.8;
+            text-align: center;
         }
 
         #boka-en-konsultation {
@@ -225,7 +226,6 @@
             background-color: #9c6a3e;
         }
 
-        /* Unique Approach Section */
         .UNIKT-TILLVÄGAGÅNGSSÄTT-container {
             display: flex;
             gap: 0px;
@@ -252,25 +252,26 @@
         }
 
         #UNIKT-TILLVÄGAGÅNGSSÄTT h1 {
-            font-size: 40px;
             margin-bottom: 20px;
             margin-left: 40px;
         }
 
         #UNIKT-TILLVÄGAGÅNGSSÄTT h2 {
             margin-left: 40px;
+            font-size: 20px;
+            font-weight: 600;
             color: #b78356;
         }
 
         #UNIKT-TILLVÄGAGÅNGSSÄTT h3 {
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: 100;
             color: #555;
             line-height: 1.6;
             max-width: 600px;
             margin-left: 40px;
         }
 
-        /* Why Work With Us */
         #varför-arbeta-med-oss {
             text-align: center;
             padding: 100px;
@@ -279,11 +280,10 @@
 
         #varför-arbeta-med-oss h2 {
             color: #b78356;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         #varför-arbeta-med-oss h1 {
-            font-size: 40px;
             margin-bottom: 30px;
             font-weight: 500;
         }
@@ -306,12 +306,14 @@
             font-weight: bold;
         }
 
-        #varför-arbeta-med-oss div p {
-            font-size: 18px;
-            color: #666;
+        .why-text {
+            font-size: 20px;
+            color: #555;
+            font-weight: 500;
+            line-height: 1.8;
+            text-align: center;
         }
 
-        /* Contact Section */
         #kontakta-oss {
             text-align: center;
             padding: 100px 80px;
@@ -321,23 +323,18 @@
             align-items: center;
         }
 
-        /* Center the heading */
         #kontakta-oss h2 {
             color: #b78356;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             text-transform: uppercase;
             margin-bottom: 10px;
         }
 
         #kontakta-oss h1 {
-            font-size: 40px;
-            font-weight: 500;
-            color: #333;
             margin-bottom: 50px;
         }
 
-        /* Layout: Contact Info on Left, Form on Right */
         #kontaktuppgifter-sendmail-container {
             display: flex;
             justify-content: space-between;
@@ -346,25 +343,30 @@
             max-width: 1200px;
         }
 
-        /* Contact Information (Left Side) */
         #kontaktuppgifter {
             width: 40%;
             text-align: left;
             font-size: 19px;
             line-height: 1.8;
             color: #333;
-            margin-left: 100px;
-            margin-top: 50px;
+            margin-left: 120px;
+            margin-top: 30px;
         }
 
         #kontaktuppgifter p {
             margin: 5px 0;
+            font-size: 18px;
+        }
+
+        #kontaktuppgifter p:nth-child(6),
+        #kontaktuppgifter p:nth-child(8) {
+            margin-top: 35px;
         }
 
         #kontaktuppgifter p:first-child {
             font-weight: bold;
             font-size: 22px;
-            color: #b78356;
+            color: black;
         }
 
         #kontaktuppgifter p:nth-child(2) {
@@ -377,7 +379,6 @@
             color: #b78356;
         }
 
-        /* Form (Right Side) */
         #sendmail {
             width: 50%;
         }
@@ -431,7 +432,6 @@
             background-color: #9c6a3e;
         }
 
-        /* Social Media Icons */
         #social-icons {
             margin-top: 40px;
         }
@@ -443,13 +443,21 @@
             transition: 0.3s;
         }
 
-        /* Google Map */
         #google-map {
+            width: 100%;
             max-width: 100%;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Footer */
+        #google-map iframe {
+            width: 100%;
+            height: 500px;
+            display: block;
+            border: none;
+        }
+
         #footer {
             background-color: white;
             padding: 30px;
@@ -461,7 +469,6 @@
             margin: auto;
         }
 
-        /* Left: Company Name */
         #footer h3 {
             color: #b78356;
             font-size: 24px;
@@ -470,7 +477,6 @@
             margin-left: 300px;
         }
 
-        /* Center: Phone Icon and Number */
         #footer .footer-phone {
             flex: 1;
             text-align: center;
@@ -493,7 +499,6 @@
             text-align: center
         }
 
-        /* Right: Social Icons */
         #footer .social-icons {
             display: flex;
             gap: 15px;
@@ -518,7 +523,6 @@
             background-color: #b78356;
         }
 
-        /* Smooth Scrolling for Navigation */
         html {
             scroll-behavior: smooth;
         }
