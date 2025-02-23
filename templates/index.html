@@ -329,6 +329,27 @@
             window.location.href = "mailto:kontakta@kvinnolag.se";
         }
 
+        document.getElementById('kontaktformulär').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            fetch('/sendmail', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+                // Handle success message
+                alert('Meddelande skickat!');
+                form.reset();
+            })
+            .catch(error => {
+                // Handle error
+                alert('Ett fel uppstod. Försök igen senare.');
+                console.error(error);
+            });
+        });
+
 
         // Mobile Menu Logic
         const mobileMenu = document.querySelector('.mobile-menu');
