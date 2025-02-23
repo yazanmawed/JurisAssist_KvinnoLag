@@ -1,9 +1,21 @@
 from flask import Flask, render_template, request, jsonify, session
 from flask_cors import CORS
+import smtplib
+from email.mime.text import MIMEText
 
 app = Flask(__name__)
 CORS(app)
 app.secret_key = 'your_secret_key_here'  # Required for session
+
+
+# DON'T forget its for test purposes only change based on company mail:
+# Configuration for your SMTP server
+SMTP_SERVER = 'smtp.gmail.com'
+SMTP_PORT = 587
+SMTP_USERNAME = 'university.west.campus.link@gmail.com' #from email
+SMTP_PASSWORD = 'hmuy zint phob fbdj'                   # password token for the email
+TO_EMAIL = 'university.west.campus.link@gmail.com'      # The email address you want to send to
+
 
 # Temporary storage (replace with database in production)
 users = {}
@@ -66,6 +78,62 @@ def get_ai_response():
         'user_name': user.first_name
     })
 
+@app.route('/sendmail', methods=['POST'])    
+def send_mail():
+    namn = request.form.get('namn')
+    from_email = request.form.get('email')
+    ämne = request.form.get('ämne')
+    meddelande = request.form.get('meddelande')
+
+    # ---------------------------
+    # Email #1: Send to company
+    # ---------------------------
+    body_company = f"""
+    Namn: {namn}
+    E-post: {from_email}
+    Ämne: {ämne}
+
+    Meddelande:
+    {meddelande}
+    """
+    msg_company = MIMEText(body_company)
+    msg_company['Subject'] = f"Kontaktformulär: {ämne}"
+    msg_company['From'] = SMTP_USERNAME
+    msg_company['To'] = TO_EMAIL
+    msg_company.add_header('Reply-To', from_email)
+
+    # ---------------------------
+    # Email #2: Send confirmation to user
+    # ---------------------------
+    body_user = f"""
+    Hej {namn},
+
+    Tack för ditt meddelande om "{ämne}".
+    Vi återkommer så snart som möjligt.
+
+    Med Vänliga Hälsningar,
+    KVINNOLAG Juristbyrå
+    """
+    msg_user = MIMEText(body_user)
+    msg_user['Subject'] = f"Bekräftelse: {ämne}"
+    msg_user['From'] = SMTP_USERNAME
+    msg_user['To'] = from_email
+    try:
+        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
+            server.starttls()
+            server.login(SMTP_USERNAME, SMTP_PASSWORD)
+
+            # Send email to company
+            server.sendmail(msg_company['From'], msg_company['To'], msg_company.as_string())
+            
+            # Send confirmation email to the user
+            server.sendmail(msg_user['From'], msg_user['To'], msg_user.as_string())
+
+        return jsonify({"status": "success", "message": "Meddelande skickat!"})
+    
+    except Exception as e:
+        print(f"Error sending emails: {e}")
+        return jsonify({"status": "error", "message": "Något gick fel."}), 500
 
 @app.route('/')
 def index():
