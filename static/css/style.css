@@ -846,7 +846,7 @@ background: #a0aec0;
         margin-bottom: 20px;
         font-size: 42px;
     }
-
+        
     #intro_text h2 {
         margin-left: 60px;
         margin-bottom: 10px;
@@ -855,7 +855,7 @@ background: #a0aec0;
         padding: 10px;
     }
     #UNIKT-TILLVÄGAGÅNGSSÄTT h1 {
-        font-size: 42px;
+        font-size: 42px;    
     }
     #varför-arbeta-med-oss {
         padding: 80px;
@@ -879,7 +879,7 @@ background: #a0aec0;
     #footer h3 {
         margin-left: 100px;
     }
-
+    
     #footer .social-icons {
         margin-right: 150px;
     }
