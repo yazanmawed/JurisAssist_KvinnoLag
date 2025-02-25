@@ -109,6 +109,7 @@
         cursor: pointer;
         margin-top: 20px;
         margin-left: 60px;
+        border-radius: 5px;
     }
 
     #boka-en-konsultation-1:hover {
@@ -221,6 +222,7 @@
             border: none;
             cursor: pointer;
             margin-top: 20px;
+            border-radius: 5px;
         }
 
         #boka-en-konsultation:hover {
