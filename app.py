@@ -3,6 +3,8 @@ from flask_cors import CORS
 import smtplib
 from email.mime.text import MIMEText
 
+
+
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-here'
 CORS(app)
@@ -15,7 +17,7 @@ SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
 SMTP_USERNAME = 'university.west.campus.link@gmail.com' #from email
 SMTP_PASSWORD = 'hmuy zint phob fbdj'                   # password token for the email
-TO_EMAIL = 'university.west.campus.link@gmail.com'      # The email address you want to send to
+TO_EMAIL = 'university.west.campus.link@gmail.com'      # The email address you want to send to "kontakta@kvinnolag.se"
 
 
 # Temporary storage (replace with database in production)
@@ -36,12 +38,12 @@ class User:
 
 def ai_chatbot_response(user_message, user):
     responses = [
-        (["hej", "tja", "hejsan", "hejsan", "Tjena" "hello"], f"Hej {user.first_name}! Hur kan jag hjälpa dig idag?"),
-        (["GM", "GM!", "Godmorgon"], f"Godmorgon {user.first_name}! Hur kan jag hjälpa dig idag?"),
-        (["GD", "GD!", "Goddag"], f"Goddag {user.first_name}! Hur kan jag hjälpa dig idag?"),
+        (["hej", "tja", "hejsan", "tjena", "hello"], f"Hej {user.first_name}! Hur kan jag hjälpa dig idag?"),
+        (["gm", "gm!", "godmorgon"], f"Godmorgon {user.first_name}! Hur kan jag hjälpa dig idag?"),
+        (["gd", "gd!", "goddag"], f"Goddag {user.first_name}! Hur kan jag hjälpa dig idag?"),
         (["hjälp", "help"], "Jag är här för att hjälpa dig. Var vänlig beskriv ditt problem."),
         (["hejdå", "bye", "adjö"], "Hejdå! Tack för att du kontaktade oss."),
-        (["Ha det så bra"], "Tack! det samma")
+        (["ha det så bra"], "Tack! det samma")
     ]
     
     lower_msg = user_message.lower()
