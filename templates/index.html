@@ -253,12 +253,25 @@
 
         function toggleChat() {
             const chatbot = document.getElementById('chatbot');
-            if (chatbot.style.display === 'none' || chatbot.style.display === '') {
-                chatbot.style.display = 'flex';
+            const isHidden = (chatbot.style.display === 'none' || chatbot.style.display === '');
+          
+            if (isHidden) {
+              // OPEN
+              chatbot.style.display = 'flex';
+              // Optionally remove .closing if it's there
+              chatbot.classList.remove('closing');
             } else {
+              // CLOSE
+              chatbot.classList.add('closing');
+              // Wait for the animationend before hiding
+              chatbot.addEventListener('animationend', function onAnimationEnd() {
                 chatbot.style.display = 'none';
+                chatbot.classList.remove('closing');
+                chatbot.removeEventListener('animationend', onAnimationEnd);
+              });
             }
-        }
+          }
+          
     
         document.getElementById('user-input')?.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
