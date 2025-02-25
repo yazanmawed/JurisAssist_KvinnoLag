@@ -4,6 +4,7 @@ import smtplib
 from email.mime.text import MIMEText
 
 app = Flask(__name__)
+app.secret_key = 'your-secret-key-here'
 CORS(app)
 
 
