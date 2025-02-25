@@ -844,11 +844,14 @@ margin-right: 100px;
 margin-left: 60px;
 }
 #intro-image{
-margin-top: 50px;
+    height: 848px;
 }
 #unik-tillvägagångssätt-image {
 margin-left: 0px;
 height: 800px;
+}
+#varför-arbeta-med-oss div{
+    padding: 19px;
 }
 }
 
