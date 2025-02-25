@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 
 app = Flask(__name__)
 CORS(app)
-app.secret_key = 'your_secret_key_here'  # Required for session
+
 
 
 # DON'T forget its for test purposes only change based on company mail:
@@ -35,9 +35,12 @@ class User:
 
 def ai_chatbot_response(user_message, user):
     responses = [
-        (["hej", "tja", "hejsan", "hello"], f"Hej {user.first_name}! Hur kan jag hjälpa dig idag?"),
+        (["hej", "tja", "hejsan", "hejsan", "Tjena" "hello"], f"Hej {user.first_name}! Hur kan jag hjälpa dig idag?"),
+        (["GM", "GM!", "Godmorgon"], f"Godmorgon {user.first_name}! Hur kan jag hjälpa dig idag?"),
+        (["GD", "GD!", "Goddag"], f"Goddag {user.first_name}! Hur kan jag hjälpa dig idag?"),
         (["hjälp", "help"], "Jag är här för att hjälpa dig. Var vänlig beskriv ditt problem."),
-        (["hejdå", "adjö"], "Hejdå! Tack för att du kontaktade oss.")
+        (["hejdå", "bye", "adjö"], "Hejdå! Tack för att du kontaktade oss."),
+        (["Ha det så bra"], "Tack! det samma")
     ]
     
     lower_msg = user_message.lower()
