@@ -584,19 +584,35 @@ transform-origin: bottom right;
 overflow: hidden;
 animation: containerOpen 0.3s ease-out;
 }
+.chatbot-container.closing {
+    animation: containerClose 0.2s ease-out forwards; /* 'forwards' to retain end state */
+  }
 
 @keyframes containerOpen {
-from {
-    transform: scale(0.8);
-    opacity: 0;
-    bottom: 50px;
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+        bottom: 50px;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        bottom: 90px;
+    }
 }
-to {
-    transform: scale(1);
-    opacity: 1;
-    bottom: 90px;
-}
-}
+
+@keyframes containerClose {
+    from {
+      transform: scale(1);
+      opacity: 1;
+      bottom: 90px;
+    }
+    to {
+      transform: scale(0.8);
+      opacity: 0;
+      bottom: 50px;
+    }
+  }
 
 /* ===== Chat Header ===== */
 .chatbot-header {
