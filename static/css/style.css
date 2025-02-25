@@ -541,7 +541,7 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background-color: #007bff;
+        background-color: #b78356;
         color: white;
         border: none;
         cursor: pointer;
@@ -599,7 +599,7 @@
 
     /* ===== Chat Header ===== */
     .chatbot-header {
-        background-color: #007bff;
+        background-color: #b78356;
         color: white;
         padding: 18px;
         display: flex;
@@ -689,7 +689,7 @@
     #user-form button[type="button"] {
         margin-top: 15px;
         padding: 12px;
-        background: #007bff;
+        background: #b78356;
         color: white;
         border: none;
         border-radius: 8px;
@@ -699,7 +699,7 @@
     }
 
     #user-form button[type="button"]:hover {
-        background: #0056b3;
+        background: #976a42;
         transform: translateY(-1px);
     }
 
