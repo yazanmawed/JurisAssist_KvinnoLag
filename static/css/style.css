@@ -910,6 +910,59 @@ background: #a0aec0;
     }
 }
 
+@media (max-width: 1300px) {
+    #intro-image {
+        height: 915px;
+        width: 55%;
+    }
+    #intro_text {
+        height: 835px;
+        width: 45%; 
+    }
+    #intro_text h1 {
+        margin-left: 60px;
+        margin-bottom: 20px;
+        font-size: 42px;
+    }
+        
+    #intro_text h2 {
+        margin-left: 60px;
+        margin-bottom: 10px;
+    }
+    #tjänster div {
+        padding: 10px;
+    }
+    #UNIKT-TILLVÄGAGÅNGSSÄTT h1 {
+        font-size: 42px;    
+    }
+    #varför-arbeta-med-oss {
+        padding: 80px;
+    }
+    #varför-arbeta-med-oss div {
+        width: 30%;
+        padding: 15px;
+    }
+    .why-text {
+        font-size: 18px;
+    }
+    .service-text {
+        font-size: 18px;
+    }
+    #kontakta-oss {
+        padding: 100px 80px;
+    }
+    #kontakta-oss h2 {
+        margin-top: -10px;
+    }
+    #footer h3 {
+        margin-left: 100px;
+    }
+    
+    #footer .social-icons {
+        margin-right: 150px;
+    }
+}
+
 @media (max-width: 992px) {
     .Rectangel_box {
         padding: 25px 30px;
@@ -1081,5 +1134,4 @@ background: #a0aec0;
     margin: 15px 0;
     text-align: center;
 }
-
 
