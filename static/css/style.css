@@ -895,8 +895,9 @@ background: #a0aec0;
     #kontaktuppgifter {
         margin-left: 60px;
     }
-    #intro-image{
-        height: 848px;
+    #intro-image {
+        height: 913px;
+        width: 50%;
     }
     #unik-tillvägagångssätt-image {
         margin-left: 0px;
@@ -1134,4 +1135,3 @@ background: #a0aec0;
     margin: 15px 0;
     text-align: center;
 }
-
