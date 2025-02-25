@@ -477,12 +477,13 @@ margin-bottom: 30px;
     font-size: 24px;
     font-weight: bold;
     margin: 0;
-    margin-left: 300px;
+    margin-left: 200px;
 }
 
 #footer .footer-phone {
     flex: 1;
     text-align: center;
+    margin-right: 30px;
 }
 
 #footer .footer-phone i {
@@ -505,7 +506,7 @@ margin-bottom: 30px;
 #footer .social-icons {
     display: flex;
     gap: 15px;
-    margin-right: 400px;
+    margin-right: 250px;
 }
 
 #footer .social-icons a {
@@ -537,7 +538,7 @@ html {
 .chatbot-button {
 position: fixed;
 bottom: 20px;
-left: 20px;
+right: 20px;
 width: 60px;
 height: 60px;
 border-radius: 50%;
@@ -561,15 +562,15 @@ box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
 @keyframes pulse {
-0% { transform: scale(1); }
-50% { transform: scale(1.05); }
-100% { transform: scale(1); }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 .chatbot-container {
 position: fixed;
 bottom: 90px;
-left: 20px;
+right: 20px;
 width: 350px;
 height: 520px;
 background-color: rgba(255, 255, 255, 0.5);
@@ -579,7 +580,7 @@ box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 z-index: 9999;
 display: none;
 flex-direction: column;
-transform-origin: bottom left;
+transform-origin: bottom right;
 overflow: hidden;
 animation: containerOpen 0.3s ease-out;
 }
@@ -830,198 +831,255 @@ background: #a0aec0;
     left: 10px;
 }
 }
+/* === Responsive Screen 14 inch === */
+@media (max-width: 1600px) {
+    #intro-image {
+        height: 863px;
+        width: 55%;
+    }
+    #intro_text {
+        height: 835px;
+        width: 45%; 
+    }
+    #intro_text h1 {
+        margin-left: 60px;
+        margin-bottom: 20px;
+        font-size: 42px;
+    }
+
+    #intro_text h2 {
+        margin-left: 60px;
+        margin-bottom: 10px;
+    }
+    #tjänster div {
+        padding: 10px;
+    }
+    #UNIKT-TILLVÄGAGÅNGSSÄTT h1 {
+        font-size: 42px;
+    }
+    #varför-arbeta-med-oss {
+        padding: 80px;
+    }
+    #varför-arbeta-med-oss div {
+        width: 30%;
+        padding: 15px;
+    }
+    .why-text {
+        font-size: 18px;
+    }
+    .service-text {
+        font-size: 18px;
+    }
+    #kontakta-oss {
+        padding: 100px 80px;
+    }
+    #kontakta-oss h2 {
+        margin-top: -10px;
+    }
+    #footer h3 {
+        margin-left: 100px;
+    }
+
+    #footer .social-icons {
+        margin-right: 150px;
+    }
+}
 
 
-
-/* Add this at the bottom of your CSS */
-/* ===== Responsive Improvements ===== */
+/* === Responsive Screen 13.3 inch === */
 @media (max-width: 1450px) {
-.Rectangel_box ul {
-margin-right: 100px;
-}
+    .Rectangel_box ul {
+        margin-right: 100px;
+    }
 
-#kontaktuppgifter {
-margin-left: 60px;
-}
-#intro-image{
-    height: 848px;
-}
-#unik-tillvägagångssätt-image {
-margin-left: 0px;
-height: 800px;
-}
-#varför-arbeta-med-oss div{
-    padding: 19px;
-}
+    #kontaktuppgifter {
+        margin-left: 60px;
+    }
+    #intro-image{
+        height: 848px;
+    }
+    #unik-tillvägagångssätt-image {
+        margin-left: 0px;
+        height: 800px;
+    }
+    #varför-arbeta-med-oss div{
+        padding: 19px;
+    }
+    #footer .footer-phone {
+        margin-right: 0px;
+    }
 }
 
 @media (max-width: 992px) {
-.Rectangel_box {
-padding: 25px 30px;
-}
+    .Rectangel_box {
+        padding: 25px 30px;
+    }
 
-.Rectangel_box ul {
-display: none; /* Hide desktop menu */
-}
+    .Rectangel_box ul {
+        display: none; /* Hide desktop menu */
+    }
 
-/* Add hamburger menu icon */
-.menu-toggle {
-display: block !important;
-font-size: 24px;
-cursor: pointer;
-margin-right: 20px;
-}
+    /* Add hamburger menu icon */
+    .menu-toggle {
+        display: block !important;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 20px;
+    }
 
-.intro-container,
-.UNIKT-TILLVÄGAGÅNGSSÄTT-container {
-flex-direction: column;
-height: auto;
-width: 100%;
-}
+    .intro-container,
+    .UNIKT-TILLVÄGAGÅNGSSÄTT-container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
 
-#intro-image{
-width: 100%;
+    #intro-image{
+        width: 100%;
 
-padding: 0%;
-}
+        padding: 0%;
+    }
 
-#intro_text{
-width: 100% !important;
-height: auto;
-}
+    #intro_text{
+        width: 100% !important;
+        height: auto;
+    }
 
-#unik-tillvägagångssätt-image {
-width: 100% !important;
-height: auto;
-margin-right: 200px;
-}
+    #unik-tillvägagångssätt-image {
+        width: 100% !important;
+        height: auto;
+        margin-right: 200px;
+    }
 
-#UNIKT-TILLVÄGAGÅNGSSÄTT {
-padding: 30px;
-}
+    #UNIKT-TILLVÄGAGÅNGSSÄTT {
+        padding: 30px;
+    }
 
-#kontaktuppgifter-sendmail-container {
-flex-direction: column;
-}
+    #kontaktuppgifter-sendmail-container {
+        flex-direction: column;
+    }
 
-#kontaktuppgifter,
-#sendmail {
-width: 100%;
-margin: 0;
-padding: 0px;
-}
+    #kontaktuppgifter,
+    #sendmail {
+        width: 100%;
+        margin: 0;
+        padding: 0px;
+    }
+    #footer .footer-phone {
+        margin-right: 0px;
+    }
 }
 
 @media (max-width: 768px) {
-h1 {
-font-size: 36px !important;
-}
+    h1 {
+        font-size: 36px !important;
+    }
 
-.logo-container {
-margin-left: 10px;
-}
+    .logo-container {
+        margin-left: 10px;
+    }
 
-.Rectangel_box h1 {
-font-size: 22px;
-}
+    .Rectangel_box h1 {
+        font-size: 22px;
+    }
 
-.Rectangel_box h3 {
-font-size: 14px;
-}
+    .Rectangel_box h3 {
+        font-size: 14px;
+    }
 
-#intro_text h1,
-#intro_text h2 {
-width: 90% !important;
-margin-left: 20px !important;
-}
+    #intro_text h1,
+    #intro_text h2 {
+        width: 90% !important;
+        margin-left: 20px !important;
+    }
 
-#boka-en-konsultation-1 {
-margin-left: 20px;
-}
+    #boka-en-konsultation-1 {
+        margin-left: 20px;
+    }
 
-#tjänster div,
-#varför-arbeta-med-oss div {
-width: 100%;
-display: block;
-margin-bottom: 30px;
-}
+    #tjänster div,
+    #varför-arbeta-med-oss div {
+        width: 100%;
+        display: block;
+        margin-bottom: 30px;
+    }
 
-#google-map iframe {
-height: 300px;
-}
+    #google-map iframe {
+        height: 300px;
+    }
 
-#footer {
-flex-direction: column;
-padding: 30px 20px;
-}
+    #footer {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
 
-#footer h3,
-#footer .social-icons {
-margin: 0 !important;
-text-align: center;
-}
+    #footer h3,
+    #footer .social-icons {
+        margin: 0 !important;
+        text-align: center;
+    }
 
-.footer-phone {
-margin: 20px 0;
-}
+    .footer-phone {
+        margin: 20px 0;
+    }
 }
 
 @media (max-width: 480px) {
-h1 {
-font-size: 20px !important;
-}
+    h1 {
+        font-size: 20px !important;
+    }
 
-.Rectangel_box {
-padding: 15px 20px;
-width: 100%;
-}
+    .Rectangel_box {
+        padding: 15px 20px;
+        width: 100%;
+    }
 
-#intro_text {
-padding: 20px !important;
-}
+    #intro_text {
+        padding: 20px !important;
+    }
 
-#varför-arbeta-med-oss,
-#tjänster {
-padding: 50px 20px;
-}
+    #varför-arbeta-med-oss,
+    #tjänster {
+        padding: 50px 20px;
+    }
 
-#kontaktformulär {
-width: 100%;
-}
+    #kontaktformulär {
+        width: 100%;
+    }
 
-.chatbot-container {
-width: 100% !important;
-left: 0 !important;
-border-radius: 0;
-}
+    .chatbot-container {
+        width: 100% !important;
+        left: 0 !important;
+        border-radius: 0;
+    }
 }
 
 /* Add hamburger menu toggle */
 .menu-toggle {
-display: none;
+    display: none;
 }
 
 /* Mobile menu styles */
 .mobile-menu {
-display: none;
-position: fixed;
-top: 80px;
-left: 0;
-width: 100%;
-background: rgba(255,255,255,0.95);
-backdrop-filter: blur(5px);
-padding: 20px;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .mobile-menu.active {
-display: block;
+    display: block;
 }
 
 .mobile-menu li {
-display: block;
-margin: 15px 0;
-text-align: center;
+    display: block;
+    margin: 15px 0;
+    text-align: center;
 }
 
 
