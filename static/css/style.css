@@ -90,86 +90,87 @@ body {
 }
 
 .intro-container {
-display: flex;
-gap: 0px;
-align-items: center;
-width: 100%;
-height: 800px;
-padding: 0px 0;
-margin: 0 auto;
-background-color: #E6D8CA;
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    padding: 0px 0;
+    margin: 0 auto;
+    background-color: #E6D8CA;
 }
 
 #boka-en-konsultation-1 {
-background-color: #b78356;
-color: white;
-padding: 12px 20px;
-font-size: 18px;
-border: none;
-cursor: pointer;
-margin-top: 20px;
-margin-left: 60px;
-border-radius: 5px;
+    background-color: #b78356;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 60px;
+    border-radius: 5px;
 }
 
 #boka-en-konsultation-1:hover {
-background-color: #9c6a3e;
+    background-color: #9c6a3e;
 }
 #intro_text {
-margin-top: 80px;
-flex: 1;
-padding: 20px;
-background-color: #E6D8CA;
-width: 50%; 
-box-sizing: border-box; 
+    margin-top: 80px;
+    flex: 1;
+    padding: 20px;
+    background-color: #E6D8CA;
+    width: 50%; 
+    box-sizing: border-box; 
 }
 
 #intro-image {
-flex: 1;
-width: 50%; 
-height: 800px; 
-object-fit: cover;
-object-position: center;
-margin-top: 0px;
+    flex: 1;
+    width: 50%; 
+    height: 800px; 
+    object-fit: cover;
+    object-position: center;
+    margin-top: 0px;
 }
 
 #intro_text h1 {
-width: 60%;
-margin-left: 60px;
-margin-bottom: 50px;
+    width: 60%;
+    margin-left: 60px;
+    margin-bottom: 50px;
 }
 
 #intro_text h2 {
-font-size: 20px;
-font-weight: 100;
-color: #555;
-line-height: 1.6;
-width: 70%;
-margin-left: 60px;
-margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 100;
+    color: #555;
+    line-height: 1.6;
+    width: 70%;
+    margin-left: 60px;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {
-.intro-container {
-    flex-direction: column;
-    width: 100%;
+    .intro-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #intro_text,
+    #intro-image {
+        width: 100% !important;
+        height: auto;
+    }
+
+    #intro_text {
+        margin-top: 10px;
+        padding: 40px;
+    }
+
+    #intro-image {
+        order: -1;
+    }
 }
 
-#intro_text,
-#intro-image {
-    width: 100% !important;
-    height: auto;
-}
-
-#intro_text {
-    margin-top: 10px;
-    padding: 40px;
-}
-
-#intro-image {
-    order: -1;
-}
-}
 #tjänster {
     text-align: center;
     padding: 100px 0;
@@ -586,7 +587,7 @@ html {
 }
 
 .chatbot-container.closing {
-    animation: containerClose 0.2s ease-out forwards; /* 'forwards' to retain end state */
+    animation: containerClose 0.2s ease-out forwards;
 }
 
 @keyframes containerOpen {
@@ -723,12 +724,15 @@ html {
 
 /* ===== Chat Interface ===== */
 .chat-interface {
+    flex: 1; 
+    min-height: 0;
     display: none;
     flex-direction: column;
     height: 100%;
 }
 
 .chatbot-messages {
+    min-height: 0; 
     flex: 1;
     padding: 18px;
     overflow-y: auto;
@@ -737,6 +741,12 @@ html {
     gap: 12px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .chatbot-input input {
+        font-size: 16px;
+    }
 }
 
 .message {
@@ -841,6 +851,8 @@ html {
         bottom: 0;
         left: 0;
         border-radius: 0;
+        display: none;
+        flex-direction: column;
     }
 
     .chatbot-button {
