@@ -10,25 +10,22 @@
     <title>KVINNOLAG Juristbyrå</title>
 </head>
 <body>
-
-    <!-- Hamburger Menu -->
-    <button class="menu-toggle">☰</button>
-    <div class="mobile-menu"></div>
-
-    <!-- Navigation Bar -->
-    <div class="Rectangel_box">
-        <div class="logo-container">
+    <nav>
+        <div class="logo">
             <h1>KVINNOLAG Juristbyrå</h1>
             <h3>DIN PARTNER FÖR STÖD OCH RÄTTVISA</h3>
         </div>
-        <ul class="desktop-menu">
+        <ul id="menuList">
             <li><a href="#intro_text">Hem</a></li>
             <li><a href="#tjänster">Tjänster</a></li>
             <li><a href="#UNIKT-TILLVÄGAGÅNGSSÄTT">Om</a></li>
             <li><a href="#varför-arbeta-med-oss">Varför välja oss</a></li>
             <li><a href="#kontakta-oss">Kontakta</a></li>
         </ul>
-    </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
 
     <div class="intro-container">
         <div id="intro_text">
@@ -256,14 +253,10 @@
             const isHidden = (chatbot.style.display === 'none' || chatbot.style.display === '');
           
             if (isHidden) {
-              // OPEN
               chatbot.style.display = 'flex';
-              // Optionally remove .closing if it's there
               chatbot.classList.remove('closing');
             } else {
-              // CLOSE
               chatbot.classList.add('closing');
-              // Wait for the animationend before hiding
               chatbot.addEventListener('animationend', function onAnimationEnd() {
                 chatbot.style.display = 'none';
                 chatbot.classList.remove('closing');
@@ -362,40 +355,19 @@
             })
             .then(response => response.json())
             .then(result => {
-                // Handle success message
                 alert('Meddelande skickat!');
                 form.reset();
             })
             .catch(error => {
-                // Handle error
                 alert('Ett fel uppstod. Försök igen senare.');
                 console.error(error);
             });
         });
 
-
-        // Mobile Menu Logic
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const desktopMenu = document.querySelector('.desktop-menu').cloneNode(true);
-        
-        // Clear existing and clone desktop menu
-        mobileMenu.innerHTML = '';
-        mobileMenu.appendChild(desktopMenu);
-
-        // Toggle Menu
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-
-        // Close menu when clicking links
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.querySelector('.menu-toggle').classList.remove('active');
-            });
-        });
-
+        function toggleMenu() {
+            var menu = document.getElementById("menuList");
+            menu.classList.toggle("show");
+        }
     </script>
 
 </body>
