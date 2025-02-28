@@ -19,7 +19,7 @@ body, html {
     color: #333;
     overflow-x: hidden;
     width: 100%;
-
+    scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
@@ -573,9 +573,7 @@ nav ul li a:hover {
     background-color: #b78356;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+
 
 
 /*===============================================================================*/
@@ -902,7 +900,7 @@ html {
 
     .chatbot-button {
         bottom: 10px;
-        left: 10px;
+        right: 10px;
     }
 }
 
@@ -918,10 +916,6 @@ html {
 
 /* === Responsive Screen 13.3 inch === */
 @media (max-width: 1450px) {
-    .Rectangel_box ul {
-        margin-right: 100px;
-    }
-
     #kontaktuppgifter {
         margin-left: 60px;
     }
@@ -997,22 +991,6 @@ html {
 }
 
 @media (max-width: 992px) {
-    .Rectangel_box {
-        padding: 25px 30px;
-    }
-
-    .Rectangel_box ul {
-        display: none; /* Hide desktop menu */
-    }
-
-    /* Add hamburger menu icon */
-    .menu-toggle {
-        display: block !important;
-        font-size: 24px;
-        cursor: pointer;
-        margin-right: 20px;
-    }
-
     .intro-container,
     .UNIKT-TILLVÄGAGÅNGSSÄTT-container {
         flex-direction: column;
@@ -1034,7 +1012,7 @@ html {
     #unik-tillvägagångssätt-image {
         width: 100% !important;
         height: auto;
-        margin-right: 200px;
+        margin-right: 0px;
     }
 
     #UNIKT-TILLVÄGAGÅNGSSÄTT {
@@ -1056,21 +1034,25 @@ html {
     }
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 36px !important;
-    }
-
-    .logo-container {
+@media (max-width: 820px) {
+    .logo{
+        margin-top: 10px;
         margin-left: 10px;
     }
 
-    .Rectangel_box h1 {
-        font-size: 22px;
+    .logo h1 {
+    
+        font-size: 30px !important;
     }
+    
+    .logo h3 {
+        font-size: 12px;
+    }
+}
 
-    .Rectangel_box h3 {
-        font-size: 14px;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px !important;
     }
 
     #intro_text h1,
@@ -1111,13 +1093,23 @@ html {
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 20px !important;
+
+    .logo{
+        margin-top: 10px;
+        margin-left: 10px;
     }
 
-    .Rectangel_box {
-        padding: 15px 20px;
-        width: 100%;
+    .logo h1 {
+    
+        font-size: 35px !important;
+    }
+    
+    .logo h3 {
+        font-size: 15px;
+    }
+
+    .menu-icon i{
+        margin-right: 15px;
     }
 
     #intro_text {
@@ -1127,6 +1119,7 @@ html {
     #varför-arbeta-med-oss,
     #tjänster {
         padding: 50px 20px;
+        justify-items: center;
     }
 
     #kontaktformulär {
@@ -1138,32 +1131,22 @@ html {
         left: 0 !important;
         border-radius: 0;
     }
+
 }
 
-/* Add hamburger menu toggle */
-.menu-toggle {
-    display: none;
+@media (max-width: 390px) {
+    .logo{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .logo h1 {
+    
+        font-size: 30px !important;
+    }
+    
+    .logo h3 {
+        font-size: 13px;
+    }
 }
 
-/* Mobile menu styles */
-.mobile-menu {
-    display: none;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(5px);
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.mobile-menu.active {
-    display: block;
-}
-
-.mobile-menu li {
-    display: block;
-    margin: 15px 0;
-    text-align: center;
-}
