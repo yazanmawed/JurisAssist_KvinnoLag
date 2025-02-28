@@ -11,82 +11,127 @@ h1{
 }
 
 
-/* General Styles */
-body {
+body, html {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f4f0;
     color: #333;
+    overflow-x: hidden;
+    width: 100%;
+
 }
 
 /* Navigation Bar */
-.Rectangel_box {
-    position: fixed;
+nav {
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5); 
-    backdrop-filter: blur(5px);
+    padding: 15px 0px; 
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 35px 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000; 
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.500); 
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    height: 70px;
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.logo{
     margin-left: 30px;
 }
 
-.Rectangel_box h1 {
-    color: #b78356;
-    font-size: 26px;
+.logo h1 {
+
+    font-size: 35px;
     margin: 0;
-    font-weight: bold;
+    color: #c58f56;
 }
 
-.Rectangel_box h3 {
-    font-size: 18px;
-    color: #666;
-    margin: 0;
-    font-weight: normal;
+.logo h3 {
+    color: #000000;
+    margin-left: 25px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.Rectangel_box ul {
-    list-style: none;
+nav ul {
     display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-    margin-right: 350px;
+    gap: 30px;
+    align-items: center;
+    margin-right: 20px;
 }
 
-.Rectangel_box li {
-    display: inline;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 500;
+nav ul li {
+    list-style-type: none;
 }
 
-.Rectangel_box li a {
+nav ul li a {
     text-decoration: none;
-    color: black;
-    font-weight: 600;
-    padding: 10px;
-    transition: color 0.3s ease;
+    color: #000000b8;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
-.Rectangel_box li a:hover {
-    color: #b78356;
+nav ul li a:hover {
+    color: #c58f56;
 }
 
-.Rectangel_box li a.active {
-    color: #b78356;
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    color: #c58f56;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.menu-icon i:hover {
+    color: #000000;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+        width: 100%;
+        z-index: 999;
+        padding: 0;
+    }
+    nav ul.show {
+        max-height: 500px;
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        font-size: 15px;
+        font-weight: bold;
+        padding: 8px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 }
 
 .intro-container {
