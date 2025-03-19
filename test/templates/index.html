@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" type="x-icon" href="/static/logo_image/icon.jpg">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>KVINNOLAG Juristbyrå</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>KVINNOLAG Juristbyrå</h1>
+            <h3>DIN PARTNER FÖR STÖD OCH RÄTTVISA</h3>
+        </div>
+        <ul id="menuList">
+            <li><a href="#intro_text">Hem</a></li>
+            <li><a href="#tjänster">Tjänster</a></li>
+            <li><a href="#UNIKT-TILLVÄGAGÅNGSSÄTT">Om</a></li>
+            <li><a href="#varför-arbeta-med-oss">Varför välja oss</a></li>
+            <li><a href="#kontakta-oss">Kontakta</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+
+    <div class="intro-container">
+        <div id="intro_text">
+            <br></br><br></br>
+            <h1>Juridik med fokus på klienters behov</h1>
+            <h2>KvinnoLag Juristbyrå har sålt juridiska tjänster i över 20 år. Vi erbjuder expertis inom olika rättsområden och har byggt upp ett starkt rykte för att stödja och stärka kvinnliga klienter. Vår verksamhet grundades i Trollhättan med syftet att tillhandahålla skräddarsydda juridiska lösningar för våra kunder.</h2>
+            <div></div>
+            <h2>Genom hängivenhet och professionalism har vi vuxit och utvecklats till en pålitlig partner för klienter som behöver förvaltningsjuridisk hjälp. Idag är vår expertis och engagemang fortsatt starka, och vi fortsätter att sträva efter att uppfylla och överträffa våra kunders förväntningar.</h2>
+            <button id="boka-en-konsultation-1" onclick="sendMail()">Boka en konsultation</button>
+        </div>
+        <img src="/static/images/1.jpg" id="intro-image">
+    </div>
+
+    <div id="tjänster">
+        <br></br>
+        <h3>TJÄNSTER</h3>
+        <h1>Erfarna juristers Kvalitetstjänster</h1>
+        
+        <div>
+            <i class="fas fa-scale-balanced"></i>
+            <h4>Juridisk Rådgivning</h4>
+            <p class="service-text">
+                Våra erfarna jurister erbjuder skräddarsydd<br>
+                juridisk rådgivning för dina specifika behov<br>
+                och frågor.
+            </p>
+        </div>
+    
+        <div>
+            <i class="fas fa-gavel"></i>
+            <h4>Företrädande i Domstol</h4>
+            <p class="service-text">
+                Vi står redo att företräda dig i rätten och se<br>
+                till att dina intressen och rättigheter<br>
+                skyddas.
+            </p>
+        </div>
+    
+        <div>
+            <i class="fas fa-file-signature"></i>
+            <h4>Överklaganden och Besvär</h4>
+            <p class="service-text">
+                Vi hjälper dig med överklaganden och<br>
+                besvär gällande förvaltningsbeslut för att<br>
+                säkerställa rättvisa utfall för dig.
+            </p>
+        </div>
+        <button id="boka-en-konsultation" onclick="sendMail()">Boka en konsultation</button>
+    </div>
+
+    <div class="UNIKT-TILLVÄGAGÅNGSSÄTT-container">
+        <div id="UNIKT-TILLVÄGAGÅNGSSÄTT">
+            <br></br><br></br>
+            <h2>UNIKT TILLVÄGAGÅNGSSÄTT</h2>
+            <h1>Exceptionell tillvägagångssätt</h1>
+            <h3>Vi på KvinnoLag Juristbyrå är kända för vårt exceptionella tillvägagångssätt när det gäller att lösa komplexa juridiska problem. Genom att kombinera vår erfarenhet och kreativitet skapar vi unika strategier som hjälper våra klienter att nå sina mål.</h3>
+            <p></p>
+            <h3>Genom att noga analysera varje fall och hitta innovativa lösningar, säkerställer vi att vi alltid är ett steg före i rättsliga frågor. Vår passion för rättvisa och expertis i förvaltningsrätt gör oss till det självklara valet för klienter som söker en pålitlig och effektiv partner.</h3>
+            <br></br>
+        </div>
+        <img src="/static/images/2.jpg" id="unik-tillvägagångssätt-image">
+        
+    </div>
+
+
+    <div id="varför-arbeta-med-oss">
+        <br></br>
+        <h2>VARFÖR ARBETA MED OSS</h2>
+        <h1>Varför KvinnoLag Juristbyrå?</h1>
+    
+        <div id="stor-erfarenhet">
+            <i class="fas fa-award"></i>
+            <h3>Stor erfarenhet</h3>
+            <p class="why-text">
+                Vi har gedigen erfarenhet inom juridik<br>
+                som gör oss kompetenta att hantera<br>
+                komplexa ärenden effektivt.
+            </p>
+        </div>
+    
+        <div id="Personlig-service">
+            <i class="fas fa-user"></i>
+            <h3>Personlig service</h3>
+            <p class="why-text">
+                Vi fokuserar på att ge varje klient personlig<br>
+                och skräddarsydd service för att möta<br>
+                deras unika juridiska behov.
+            </p>
+        </div>
+    
+        <div id="Juridisk-expertis">
+            <i class="fas fa-balance-scale"></i>
+            <h3>Juridisk expertis</h3>
+            <p class="why-text">
+                Vårt team består av skickliga jurister som<br>
+                är dedikerade till att uppnå de bästa<br>
+                resultaten för våra klienter.
+            </p>
+        </div>
+        <button id="boka-en-konsultation" onclick="sendMail()">Boka en konsultation</button>
+    </div>
+
+
+    <div id="kontakta-oss">
+        <br></br>
+        <h2>KONTAKTA OSS</h2>
+        <h1>Kontakta KVINNOLAG<br>Juristbyrå för juridisk<br>rådgivning</h1>
+    
+        <div id="kontaktuppgifter-sendmail-container">
+            <div id="kontaktuppgifter">
+                <p>Information om kontoret</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Adress</strong></p>
+                <p>KVINNOLAG Juristbyrå</p>
+                <p>Åkerssjövägen 10</p>
+                <p>461 53 Trollhättan, Sweden</p>
+    
+                <p><i class="fas fa-phone"></i> <strong>Telefon</strong></p>
+                <p>0046 707807111</p>
+    
+                <p><i class="fas fa-envelope"></i> <strong>E-post</strong></p>
+                <p>kontakta@kvinnolag.se</p>
+    
+                <div id="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61563986576221" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/kvinnolag/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div id="sendmail">
+                <form id="kontaktformulär" method="post">
+                    <label for="namn">Namn *</label>
+                    <input type="text" id="namn" name="namn" required>
+    
+                    <label for="email">E-post *</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="ämne">Ämne *</label>
+                    <input type="text" id="ämne" name="ämne" required>
+    
+                    <label for="meddelande">Meddelande *</label>
+                    <textarea id="meddelande" name="meddelande" required></textarea>
+    
+                    <input type="submit" value="Skicka">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="google-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2098.397036084429!2d12.267917612662623!3d58.268590095363834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46453dd69337acb1%3A0xf792f9f17fed2eb4!2sKvinnoLag%20Juristbyr%C3%A5!5e0!3m2!1sen!2sse!4v1740145522906!5m2!1sen!2sse"
+          width="100%" 
+          height="500"
+          style="border:0;" 
+          allowfullscreen=""
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      
+
+
+    <div id="footer">
+        <h3>KVINNOLAG Juristbyrå</h3>
+    
+        <div class="footer-phone">
+            <i class="fas fa-phone"></i>
+            <p>Telefon</p>
+            <p>0046 707807111</p>
+        </div>
+    
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61563986576221" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/kvinnolag/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+
+    <button class="chatbot-button" onclick="toggleChat()">Chat</button>
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <span>JuristAssist</span>
+            <span class="close-btn" onclick="toggleChat()">×</span>
+        </div>
+        
+        <div id="user-registration">
+            <h3>Vänligen registrera dig för att chatta</h3>
+            <form id="user-form">
+                <input type="text" placeholder="Förnamn" id="first_name" required>
+                <input type="text" placeholder="Efternamn" id="last_name" required>
+                <input type="number" placeholder="Ålder" id="age" required>
+                <input type="text" placeholder="Kön" id="gender" required>
+                <input type="email" placeholder="E-post" id="email" required>
+                <button type="button" onclick="registerUser()">
+                    Starta Chat
+                </button>
+            </form>
+        </div>
+
+        <div class="chat-interface" style="display:none;">
+            <div class="chatbot-messages" id="chat-messages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="user-input" placeholder="Skriv ditt meddelande...">
+                <button onclick="sendMessage()">Skicka</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let currentUser = null;
+
+        function toggleChat() {
+            const chatbot = document.getElementById('chatbot');
+            const isHidden = (chatbot.style.display === 'none' || chatbot.style.display === '');
+          
+            if (isHidden) {
+              chatbot.style.display = 'flex';
+              chatbot.classList.remove('closing');
+            } else {
+              chatbot.classList.add('closing');
+              chatbot.addEventListener('animationend', function onAnimationEnd() {
+                chatbot.style.display = 'none';
+                chatbot.classList.remove('closing');
+                chatbot.removeEventListener('animationend', onAnimationEnd);
+              });
+            }
+          }
+          
+    
+        document.getElementById('user-input')?.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    
+        async function registerUser() {
+            const userData = {
+                first_name: document.getElementById('first_name').value,
+                last_name: document.getElementById('last_name').value,
+                age: document.getElementById('age').value,
+                gender: document.getElementById('gender').value,
+                email: document.getElementById('email').value,
+            };
+    
+            try {
+                const response = await fetch('/create_user', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(userData)
+                });
+                
+                const data = await response.json();
+                currentUser = data.user_id;
+                document.getElementById('user-registration').style.display = 'none';
+                document.querySelector('.chat-interface').style.display = 'flex';
+                
+                const chatMessages = document.getElementById('chat-messages');
+                const welcomeMsg = document.createElement('div');
+                welcomeMsg.className = 'message bot-message';
+                welcomeMsg.textContent = `Välkommen ${userData.first_name}! Hur kan jag hjälpa dig idag?`;
+                chatMessages.appendChild(welcomeMsg);
+                
+            } catch (error) {
+                console.error('Registration error:', error);
+            }
+        }
+    
+        async function sendMessage() {
+            const userInput = document.getElementById('user-input');
+            const message = userInput.value.trim();
+            const chatMessages = document.getElementById('chat-messages');
+    
+            if (message) {
+                const userMsg = document.createElement('div');
+                userMsg.className = 'message user-message';
+                userMsg.textContent = `${document.getElementById('first_name').value}: ${message}`;
+                chatMessages.appendChild(userMsg);
+    
+                try {
+                    const response = await fetch('/get_response', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({ message: message })
+                    });
+                    
+                    const data = await response.json();
+                    const botMsg = document.createElement('div');
+                    botMsg.className = 'message bot-message';
+                    botMsg.textContent = `Juristbot: ${data.response}`;
+                    chatMessages.appendChild(botMsg);
+    
+                } catch (error) {
+                    console.error('Error:', error);
+                    const errorMsg = document.createElement('div');
+                    errorMsg.className = 'message bot-message';
+                    errorMsg.textContent = "Juristbot: Tekniskt fel - försök igen senare";
+                    chatMessages.appendChild(errorMsg);
+                }
+        
+                userInput.value = '';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+
+        function sendMail() {
+            window.location.href = "mailto:kontakta@kvinnolag.se";
+        }
+
+        document.getElementById('kontaktformulär').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            fetch('/sendmail', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+                alert('Meddelande skickat!');
+                form.reset();
+            })
+            .catch(error => {
+                alert('Ett fel uppstod. Försök igen senare.');
+                console.error(error);
+            });
+        });
+
+        function toggleMenu() {
+            var menu = document.getElementById("menuList");
+            menu.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
