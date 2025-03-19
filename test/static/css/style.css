@@ -1,0 +1,1152 @@
+h2, h3, h4, body, p, a, li, input, textarea, #kontaktformulär label, #boka-en-konsultation, #boka-en-konsultation-1, #kontaktformulär input,
+#kontaktformulär textarea, div {
+    font-family: "Times New Roman", Times, serif;
+}
+
+h1{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 100;
+    font-size: 44px;
+    color: black;
+}
+
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f4f0;
+    color: #333;
+    overflow-x: hidden;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.500); 
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    height: 70px;
+}
+
+.logo{
+    margin-left: 30px;
+}
+
+.logo h1 {
+
+    font-size: 35px;
+    margin: 0;
+    color: #c58f56;
+}
+
+.logo h3 {
+    color: #000000;
+    margin-left: 25px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000b8;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c58f56;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    color: #c58f56;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.menu-icon i:hover {
+    color: #000000;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+        width: 100%;
+        z-index: 999;
+        padding: 0;
+    }
+    nav ul.show {
+        max-height: 500px;
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        font-size: 15px;
+        font-weight: bold;
+        padding: 8px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.intro-container {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    padding: 0px 0;
+    margin: 0 auto;
+    background-color: #E6D8CA;
+}
+
+#boka-en-konsultation-1 {
+    background-color: #b78356;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 60px;
+    border-radius: 5px;
+}
+
+#boka-en-konsultation-1:hover {
+    background-color: #9c6a3e;
+}
+#intro_text {
+    margin-top: 80px;
+    flex: 1;
+    padding: 20px;
+    background-color: #E6D8CA;
+    width: 50%; 
+    box-sizing: border-box; 
+}
+
+#intro-image {
+    flex: 1;
+    width: 50%; 
+    height: 800px; 
+    object-fit: cover;
+    object-position: center;
+    margin-top: 0px;
+}
+
+#intro_text h1 {
+    width: 60%;
+    margin-left: 60px;
+    margin-bottom: 50px;
+}
+
+#intro_text h2 {
+    font-size: 20px;
+    font-weight: 100;
+    color: #555;
+    line-height: 1.6;
+    width: 70%;
+    margin-left: 60px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #intro_text,
+    #intro-image {
+        width: 100% !important;
+        height: auto;
+    }
+
+    #intro_text {
+        margin-top: 10px;
+        padding: 40px;
+    }
+
+    #intro-image {
+        order: -1;
+    }
+}
+
+#tjänster {
+    text-align: center;
+    padding: 100px 0;
+    background-color: white;
+}
+
+#tjänster h3 {
+    color: #b78356;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#tjänster h4 {
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#tjänster h1 {
+    margin-bottom: 30px;
+}
+
+#tjänster div {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    vertical-align: top;
+    text-align: center;
+}
+
+#tjänster div i {
+    font-size: 42px;
+    color: #b78356;
+    margin-bottom: 10px;
+}
+
+.service-text {
+    font-size: 20px;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: center;
+}
+
+#boka-en-konsultation {
+    background-color: #b78356;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#boka-en-konsultation:hover {
+    background-color: #9c6a3e;
+}
+
+.UNIKT-TILLVÄGAGÅNGSSÄTT-container {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    width: 100%;
+    padding: 0px 0;
+    margin: 0 auto;
+    background-color: #E6D8CA;
+}
+#unik-tillvägagångssätt-image {
+    margin-left: 200px;
+    flex: 1;
+    width: 50%; 
+    height: 800px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#UNIKT-TILLVÄGAGÅNGSSÄTT {
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #E6D8CA;
+}
+
+#UNIKT-TILLVÄGAGÅNGSSÄTT h1 {
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+#UNIKT-TILLVÄGAGÅNGSSÄTT h2 {
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #b78356;
+}
+
+#UNIKT-TILLVÄGAGÅNGSSÄTT h3 {
+    font-size: 20px;
+    font-weight: 100;
+    color: #555;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: 40px;
+}
+
+#varför-arbeta-med-oss {
+    text-align: center;
+    padding: 100px;
+    background-color: white;
+}
+
+#varför-arbeta-med-oss h2 {
+    color: #b78356;
+    font-size: 20px;
+}
+
+#varför-arbeta-med-oss h1 {
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+#varför-arbeta-med-oss div {
+    display: inline-block;
+    width: 30%;
+   
+    text-align: center;
+}
+
+#varför-arbeta-med-oss div i {
+    font-size: 40px;
+    color: #b78356;
+    margin-bottom: 10px;
+}
+
+#varför-arbeta-med-oss div h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.why-text {
+    font-size: 20px;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: center;
+}
+
+#kontakta-oss {
+    text-align: center;
+    padding: 100px 80px;
+    background-color: #E6D8CA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#kontakta-oss h2 {
+    color: #b78356;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#kontakta-oss h1 {
+    margin-bottom: 50px;
+}
+
+#kontaktuppgifter-sendmail-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#kontaktuppgifter {
+    width: 40%;
+    text-align: left;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #333;
+    margin-left: 120px;
+    margin-top: 30px;
+}
+
+#kontaktuppgifter p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+#kontaktuppgifter p:nth-child(6),
+#kontaktuppgifter p:nth-child(8) {
+    margin-top: 35px;
+}
+
+#kontaktuppgifter p:first-child {
+    font-weight: bold;
+    font-size: 22px;
+    color: black;
+}
+
+#kontaktuppgifter p:nth-child(2) {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#kontaktuppgifter i {
+    margin-right: 10px;
+    color: #b78356;
+}
+
+#sendmail {
+    width: 50%;
+}
+
+#kontaktformulär {
+    background: white;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+    margin-left: -50px;
+    margin-right: 50px;
+}
+
+#kontaktformulär label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+#kontaktformulär input,
+#kontaktformulär textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: -10px;
+}
+
+#kontaktformulär textarea {
+    min-height: 120px;
+}
+
+#kontaktformulär input[type="submit"] {
+    background-color: #b78356;
+    color: white;
+    border: none;
+    padding: 14px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 105%;
+}
+
+#kontaktformulär input[type="submit"]:hover {
+    background-color: #9c6a3e;
+}
+
+#social-icons {
+    margin-top: 40px;
+}
+
+#social-icons a {
+    font-size: 32px;
+    margin-right: 15px;
+    color: #E6D8CA;
+    transition: 0.3s;
+}
+
+#google-map {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#google-map iframe {
+    width: 100%;
+    height: 500px;
+    display: block;
+    border: none;
+}
+
+#footer {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+#footer h3 {
+    color: #b78356;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 200px;
+}
+
+#footer .footer-phone {
+    flex: 1;
+    text-align: center;
+    margin-right: 30px;
+}
+
+#footer .footer-phone i {
+    font-size: 26px;
+    color: black;
+    margin-bottom: 5px;
+    flex: 1;
+    text-align: center
+}
+
+#footer .footer-phone p {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    flex: 1;
+    text-align: center
+}
+
+#footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 250px;
+}
+
+#footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+#footer .social-icons a:hover {
+    background-color: #b78356;
+}
+
+
+
+
+/*===============================================================================*/
+
+/* ===== Chatbot Container & Button ===== */
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #b78356;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.chatbot-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    height: 520px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    transform-origin: bottom right;
+    overflow: hidden;
+    animation: containerOpen 0.3s ease-out;
+}
+
+.chatbot-container.closing {
+    animation: containerClose 0.2s ease-out forwards;
+}
+
+@keyframes containerOpen {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+        bottom: 50px;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        bottom: 90px;
+    }
+}
+
+@keyframes containerClose {
+    from {
+      transform: scale(1);
+      opacity: 1;
+      bottom: 90px;
+    }
+    to {
+      transform: scale(0.8);
+      opacity: 0;
+      bottom: 50px;
+    }
+}
+
+/* ===== Chat Header ===== */
+.chatbot-header {
+    background-color: #b78356;
+    color: white;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.chatbot-header span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+/* ===== Registration Form ===== */
+#user-registration {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#user-registration h3 {
+    margin: 0 0 25px 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+#user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+#user-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #4a5568;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#user-form input,
+#user-form select,
+#user-form textarea {
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+#user-form input:focus,
+#user-form select:focus,
+#user-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+    outline: none;
+}
+
+#user-form select {
+    appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg fill='%234a5568' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 12px center/14px;
+}
+
+#user-form textarea {
+    height: 90px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+#user-form button[type="button"] {
+    margin-top: 15px;
+    padding: 12px;
+    background: #b78356;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#user-form button[type="button"]:hover {
+    background: #976a42;
+    transform: translateY(-1px);
+}
+
+/* ===== Chat Interface ===== */
+.chat-interface {
+    flex: 1; 
+    min-height: 0;
+    display: none;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chatbot-messages {
+    min-height: 0; 
+    flex: 1;
+    padding: 18px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .chatbot-input input {
+        font-size: 16px;
+    }
+}
+
+.message {
+    max-width: 80%;
+    padding: 12px 16px;
+    line-height: 1.4;
+    border-radius: 14px;
+    animation: messageEntry 0.3s ease-out;
+    word-wrap: break-word;
+    position: relative;
+}
+
+@keyframes messageEntry {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-message {
+    background: #b78356;
+    color: white;
+    margin-left: auto;
+    border-radius: 14px 14px 4px 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.bot-message {
+    background: white;
+    color: #2d3748;
+    margin-right: auto;
+    border-radius: 14px 14px 14px 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* ===== Input Area ===== */
+.chatbot-input {
+    padding: 16px;
+    border-top: 1px solid #e2e8f0;
+    background: white;
+    display: flex;
+    gap: 10px;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.chatbot-input input:focus {
+    border-color: #b78356;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+    outline: none;
+}
+
+.chatbot-input button {
+    padding: 10px 18px;
+    background: #b78356;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chatbot-input button:hover {
+    background: #976a42;
+    transform: translateY(-1px);
+}
+
+/* ===== Scrollbar Styling ===== */
+.chatbot-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbot-messages::-webkit-scrollbar-track {
+    background: rgba(241, 245, 249, 0.5);
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 480px) {
+    .chatbot-container {
+        width: 100%;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
+        display: none;
+        flex-direction: column;
+    }
+
+    .chatbot-button {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* === Responsive Screen 14 inch === */
+@media (max-width: 1600px) {
+    #intro-image {
+        height: 863px;
+    }
+    #intro_text {
+        height: 785px;
+    }
+}
+
+/* === Responsive Screen 13.3 inch === */
+@media (max-width: 1450px) {
+    #kontaktuppgifter {
+        margin-left: 60px;
+    }
+    #intro-image {
+        height: 865px;
+        width: 50%;
+    }
+    #unik-tillvägagångssätt-image {
+        margin-left: 0px;
+        height: 800px;
+    }
+    #varför-arbeta-med-oss div{
+        padding: 19px;
+    }
+    #footer .footer-phone {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 1300px) {
+    #intro-image {
+        height: 850px;
+        width: 53%;
+    }
+    #intro_text {
+        height: 770px;
+        width: 47%; 
+        padding: 0px;
+    }
+    #intro_text h1 {
+        margin-left: 60px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        font-size: 42px;
+    }
+        
+    #intro_text h2 {
+        margin-left: 60px;
+        margin-bottom: 10px;
+    }
+    #tjänster div {
+        padding: 10px;
+    }
+    #UNIKT-TILLVÄGAGÅNGSSÄTT h1 {
+        font-size: 42px;    
+    }
+    #varför-arbeta-med-oss {
+        padding: 80px;
+    }
+    #varför-arbeta-med-oss div {
+        width: 30%;
+        padding: 15px;
+    }
+    .why-text {
+        font-size: 18px;
+    }
+    .service-text {
+        font-size: 18px;
+    }
+    #kontakta-oss {
+        padding: 100px 80px;
+    }
+    #kontakta-oss h2 {
+        margin-top: -10px;
+    }
+    #footer h3 {
+        margin-left: 100px;
+    }
+    
+    #footer .social-icons {
+        margin-right: 150px;
+    }
+}
+
+@media (max-width: 992px) {
+    .intro-container,
+    .UNIKT-TILLVÄGAGÅNGSSÄTT-container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    #intro-image{
+        width: 100%;
+
+        padding: 0%;
+    }
+
+    #intro_text{
+        width: 100% !important;
+        height: auto;
+    }
+
+    #unik-tillvägagångssätt-image {
+        width: 100% !important;
+        height: auto;
+        margin-right: 0px;
+    }
+
+    #UNIKT-TILLVÄGAGÅNGSSÄTT {
+        padding: 30px;
+    }
+
+    #kontaktuppgifter-sendmail-container {
+        flex-direction: column;
+    }
+
+    #kontaktuppgifter,
+    #sendmail {
+        width: 100%;
+        margin: 0;
+        padding: 0px;
+    }
+    #footer .footer-phone {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 820px) {
+    .logo{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .logo h1 {
+    
+        font-size: 30px !important;
+    }
+    
+    .logo h3 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px !important;
+    }
+
+    #intro_text h1,
+    #intro_text h2 {
+        width: 90% !important;
+        margin-left: 20px !important;
+    }
+
+    #boka-en-konsultation-1 {
+        margin-left: 20px;
+    }
+
+    #tjänster div,
+    #varför-arbeta-med-oss div {
+        width: 100%;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #google-map iframe {
+        height: 300px;
+    }
+
+    #footer {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    #footer h3,
+    #footer .social-icons {
+        margin: 0 !important;
+        text-align: center;
+    }
+
+    .footer-phone {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .logo h1 {
+    
+        font-size: 35px !important;
+    }
+    
+    .logo h3 {
+        font-size: 15px;
+    }
+
+    .menu-icon i{
+        margin-right: 15px;
+    }
+
+    #intro_text {
+        padding: 20px !important;
+    }
+
+    #varför-arbeta-med-oss,
+    #tjänster {
+        padding: 50px 20px;
+        justify-items: center;
+    }
+
+    #kontaktformulär {
+        width: 100%;
+    }
+
+    .chatbot-container {
+        width: 100% !important;
+        left: 0 !important;
+        border-radius: 0;
+    }
+
+}
+
+@media (max-width: 390px) {
+    .logo{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .logo h1 {
+    
+        font-size: 30px !important;
+    }
+    
+    .logo h3 {
+        font-size: 13px;
+    }
+}
+
